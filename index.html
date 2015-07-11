@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/感冒/" style="font-size: 10px;">感冒</a> <a href="/tags/随想/" style="font-size: 10px;">随想</a>
+						<a href="/tags/感冒/" style="font-size: 10px;">感冒</a> <a href="/tags/翻墙/" style="font-size: 10px;">翻墙</a> <a href="/tags/随想/" style="font-size: 10px;">随想</a>
 					</div>
 				</section>
 				
@@ -184,6 +184,71 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-gfw-bypass-tutorial-for-shanshan" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/" class="article-date">
+  	<time datetime="2015-07-11T07:53:01.000Z" itemprop="datePublished">Jul 11 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/">给妹子看的简易翻墙教程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先简单介绍一下翻墙的原理。由于墙的存在，我们的电脑不能和某些网站建立连接，这些网站我们叫做“被GFW认证的网站”。于是，我们需要一台既可以和我们连接，又可以和“被GFW认证的网站”连接的服务器进行中转。所以所谓的翻墙就是通过中转服务器来访问网站。</p>
+<h3 id="下载">下载</h3><p>我们需要用到的软件是shadowsocks，你可以从<a href="https://github.com/shadowsocks/shadowsocks-csharp/releases" target="_blank" rel="external">这里下载</a></p>
+<p>需要说明的一点是：对于<strong>Win8及之后</strong>的系统，需要选择<code>Shadowsocks-win-dotnet4.0-x.x.x.zip</code>这种安装包，对于<strong>Win7及之前的系统</strong>，需要选择<code>Shadowsocks-win-x.x.x.zip</code>这种安装包。</p>
+<p>ps. 因为下载服务器位于Github，所有有些时候不翻墙是无法下载的，于是这个问题就变成了先有鸡还是先有蛋的问题。对于这种情况，我强烈建议找你男朋友解决。</p>
+<h3 id="配置">配置</h3><p>下载完软件之后，我们得到了一个可爱的压缩包，果断解压。然后我们就得到了一个名为<code>Shadowsocks.exe</code>的文件，找一个你喜欢的地方放置它，比如我们把它放在D盘的Shadowsocks目录下。</p>
+<p>放置好之后，双击打开。跳出了一个配置页面，在这个配置页面中填入我给你的服务器信息（服务器IP、服务器端口、密码、加密方式），其他选项保持默认就好，填好以后点击确定。<br><img src="http://pic.yupoo.com/hansnow/ENdtHjol/tNNFI.png" alt="Alt text"></p>
+<p>这时候它就非常调皮的跑到右下角的系统托盘里了。<br><img src="http://pic.yupoo.com/hansnow/ENdtH7pu/GjxP4.png" alt="Alt text"></p>
+<p>如果你没找到他，那很可能是隐藏在托盘最左侧的小三角里面了。<br><img src="http://pic.yupoo.com/hansnow/ENdtHbeR/1Qb2q.png" alt="Alt text"></p>
+<p>他老在小三角里躲着也不是个事儿，所以我们来配置一下，让它始终显示在系统托盘里。点击系统托盘最左边的小三角，然后点击<code>自定义</code>，找到shadowsocks，并将右侧的行为改成“显示图标和通知”，然后就大功告成了。<br><img src="http://pic.yupoo.com/hansnow/ENdtHBgp/Dwdid.png" alt="Alt text"></p>
+<h3 id="使用">使用</h3><h4 id="Easy模式">Easy模式</h4><p>在系统托盘的shadowsocks图标上右键，勾选“启用系统代理”，在“系统代理模式”中选择“PAC模式”，勾选“开机启动”。<br><img src="http://pic.yupoo.com/hansnow/ENdtHBOQ/VEFLM.png" alt="Alt text"></p>
+<p>做完上面这几步之后就可以愉快的上网了，Facebook、Google、Twitter、YouTube全都无障碍访问。</p>
+<p>但是，Easy模式有一个缺陷：只能绕过一些常见的“被GFW认证的网站”，对于一些比较小众，但依然被“GFW认证”的网站就无能为力了。为了解决这种问题，一个简单粗暴的解决方式是在“系统代理模式”中选择“全局模式”，这时候所有的访问会全部由代理中转，也就解决了那些小众网站不能访问的问题。但是这又带来了一个新的问题，既然是所有流量都会经过中转服务器，那么访问境内网站的时候就会非常慢，于是你又得切回“PAC模式”，这么切来切去的不是个办法，所以想完美解决这个问题我们就要学习下面的Hard模式。</p>
+<h4 id="Hard模式">Hard模式</h4><p>Hard模式说起来比较复杂，以后慢慢补充。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-catch-cold-and-headache-in-2015" class="article article-type-post" itemscope itemprop="blogPost">
   
