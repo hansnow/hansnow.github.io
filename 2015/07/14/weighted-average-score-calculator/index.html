@@ -3,24 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>又是一个月，好久不见 | Han</title>
+  <title>加权平均成绩计算器 | Han</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="啊，又一个月没来了。一转眼又到了年末，想起去年这个时候，痛苦就要来了，我当然不想让它来。过得真快，一转眼一年又过去了。
-今年刚刚开始，我去车道沟“旅行”，当时心情压抑的不行，同时还有点庆幸，让我在宿舍跨了年。“旅行”期间想了好多事儿啊，当时一点一点地写在了为知笔记里面，而且当时还立志今年一定要好好练练文笔。一整年就快过去了，文笔依然差，写东西依然不勤快。
-人一到某个阶段的末尾就禁不住回忆，今年经历">
+  <meta name="description" content="大三刚刚结束，学院根据前三个学年的成绩发布了预排名表。在签字确认之前当然还是自己算算比较放心，所以写了这个小脚本用来计算自己上学以来的所有学科的加权平均分（不包括任选课）
+截图因为教务系统加了验证码，所以这次使用了GUI。但是我只会用Tkinter，所以别期待太好看。大概就长下面这样了。
+登录界面：登录界面
+错误提示：错误提示
+主界面：主界面
+使用说明源码方式在使用源码方式运行前，请确保你已经安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="又是一个月，好久不见">
-<meta property="og:url" content="http://bbo.me/2014/12/05/long-time-no-see-at-the-end-of-2014/index.html">
+<meta property="og:title" content="加权平均成绩计算器">
+<meta property="og:url" content="http://bbo.me/2015/07/14/weighted-average-score-calculator/index.html">
 <meta property="og:site_name" content="Han">
-<meta property="og:description" content="啊，又一个月没来了。一转眼又到了年末，想起去年这个时候，痛苦就要来了，我当然不想让它来。过得真快，一转眼一年又过去了。
-今年刚刚开始，我去车道沟“旅行”，当时心情压抑的不行，同时还有点庆幸，让我在宿舍跨了年。“旅行”期间想了好多事儿啊，当时一点一点地写在了为知笔记里面，而且当时还立志今年一定要好好练练文笔。一整年就快过去了，文笔依然差，写东西依然不勤快。
-人一到某个阶段的末尾就禁不住回忆，今年经历">
-<meta property="og:updated_time" content="2014-12-05T13:54:53.000Z">
+<meta property="og:description" content="大三刚刚结束，学院根据前三个学年的成绩发布了预排名表。在签字确认之前当然还是自己算算比较放心，所以写了这个小脚本用来计算自己上学以来的所有学科的加权平均分（不包括任选课）
+截图因为教务系统加了验证码，所以这次使用了GUI。但是我只会用Tkinter，所以别期待太好看。大概就长下面这样了。
+登录界面：登录界面
+错误提示：错误提示
+主界面：主界面
+使用说明源码方式在使用源码方式运行前，请确保你已经安装">
+<meta property="og:updated_time" content="2015-07-14T15:19:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="又是一个月，好久不见">
-<meta name="twitter:description" content="啊，又一个月没来了。一转眼又到了年末，想起去年这个时候，痛苦就要来了，我当然不想让它来。过得真快，一转眼一年又过去了。
-今年刚刚开始，我去车道沟“旅行”，当时心情压抑的不行，同时还有点庆幸，让我在宿舍跨了年。“旅行”期间想了好多事儿啊，当时一点一点地写在了为知笔记里面，而且当时还立志今年一定要好好练练文笔。一整年就快过去了，文笔依然差，写东西依然不勤快。
-人一到某个阶段的末尾就禁不住回忆，今年经历">
+<meta name="twitter:title" content="加权平均成绩计算器">
+<meta name="twitter:description" content="大三刚刚结束，学院根据前三个学年的成绩发布了预排名表。在签字确认之前当然还是自己算算比较放心，所以写了这个小脚本用来计算自己上学以来的所有学科的加权平均分（不包括任选课）
+截图因为教务系统加了验证码，所以这次使用了GUI。但是我只会用Tkinter，所以别期待太好看。大概就长下面这样了。
+登录界面：登录界面
+错误提示：错误提示
+主界面：主界面
+使用说明源码方式在使用源码方式运行前，请确保你已经安装">
   
     <link rel="alternative" href="/atom.xml" title="Han" type="application/atom+xml">
   
@@ -190,11 +199,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-long-time-no-see-at-the-end-of-2014" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-weighted-average-score-calculator" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2014/12/05/long-time-no-see-at-the-end-of-2014/" class="article-date">
-  	<time datetime="2014-12-05T12:18:40.000Z" itemprop="datePublished">Dec 5 2014</time>
+      <a href="/2015/07/14/weighted-average-score-calculator/" class="article-date">
+  	<time datetime="2015-07-14T14:54:20.000Z" itemprop="datePublished">Jul 14 2015</time>
 </a>
     </div>
   
@@ -207,7 +216,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      又是一个月，好久不见
+      加权平均成绩计算器
     </h1>
   
 
@@ -215,6 +224,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教务/">教务</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -223,15 +236,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>啊，又一个月没来了。一转眼又到了年末，想起去年这个时候，痛苦就要来了，我当然不想让它来。过得真快，一转眼一年又过去了。</p>
-<p>今年刚刚开始，我去车道沟“旅行”，当时心情压抑的不行，同时还有点庆幸，让我在宿舍跨了年。“旅行”期间想了好多事儿啊，当时一点一点地写在了为知笔记里面，而且当时还立志今年一定要好好练练文笔。一整年就快过去了，文笔依然差，写东西依然不勤快。</p>
-<p>人一到某个阶段的末尾就禁不住回忆，今年经历了好多事儿啊。尤其是年中开始去某小公司实习的经历，让我成长了很多。见识了甲方乙方勾心斗角争夺利益，见识了公司里让人恶心的不行的踢皮球现象。网站的项目磨磨唧唧弄到现在，还好有光光，足够强势，一直以来让我们保持主动权，不至于被公司欺负得太厉害。还有就是感恩，感恩这个公司让我认识了这么多好玩儿的同事，大家每天在办公室里逗比的不行，真是开心。</p>
-<a id="more"></a>
-<p>因为做这个项目，迫使自己学了很多新的技术，这种感觉真的是好久都没有过了。想起初中的那段时间，刚刚接触互联网，看什么东西都觉得新鲜，什么都想玩儿。那是个时候非常痴迷“偏门技术”，比如Windows下的破解、外挂和黑客技术。现在想想那时候看的东西确实是挺入门的，但那时候学习的热情实在是高的不能再高了，每天脑子里想得都是这些东西。那时候老妈一直不理解，觉得我就是纯粹地在玩儿电脑（这么想也没啥不对，我确实就是在玩儿啊），三番五次地阻止我用电脑，还把电脑设了密码。也就是那时候起，我熟练地掌握了Ghost装系统的技术。把原来带密码的系统备份一下，换成自己的没密码系统，等老妈快下班的时候再赶紧换回来。现在想想还挺怀念的。对于那段时间的瞎折腾几乎没有后悔，除了一点，那时候因为要学破解和外挂，稍微学了点汇编的皮毛，没有深入学习。如果那时候的我知道大学还要学一门叫做“微机原理”的课的话，估计汇编早就学成了。</p>
-<p>V2EX是个好社区，和HiPDA一样是个人站点。在ifanr看了一篇Livid的专访，感觉是个十分有意思的人。很多时候，读一些人的访谈或者事迹的时候不禁感慨，真牛逼。回头单独写写吧。zhuyi成了专业吃货，没事儿的时候敲敲鼓。Livid不知道在干啥，偶尔会看见他和Oliva在社区里互动一下。阮一峰入职阿里了，不过他的博客看得确实不多。伞哥前段时间在微博上和老婆撕逼，嚷嚷着要离婚，哎，过日子真不容易。各位大佬活得有声有色，看他们的故事比看电视剧有意思得多。</p>
-<p>晚上很没骨气地去吃了烤肉大哥，之所以说自己没骨气是因为他家现在有外卖了，而店里还是那几个人，还是那么大地方。很明显的，大哥已经有点顾不上店里的顾客了，肉的味道也不怎么好了。之前因为这个已经把他家加入黑名单了，但是今天实在是有点想吃，所以还是很没骨气的去了，果然还是黑名单的命，彻底再见了。今天听大哥说，他这个店已经开了11年，真的，因为外卖毁了真的不太好。想起前些日子去南门最里面的那家北邮学长开的黄焖鸡，像叔叔熊一样，被悄无声息的收购掉了。有些嘴比较叼的顾客从味道上就能尝出来，还有些顾客从店员的变化里看出来了。总之以后是不会去了。想到这里心里还有点不是滋味，南门能吃的店越来越少了，以后去哪儿吃饭啊，发愁……</p>
-<p>踏踏实实活着，老老实实攒钱，还信用卡，等待圣诞节割肉。还有，我啥时候能捡个女朋友啊，愁……</p>
-<p>哦，晚上光光告诉我爱知乎关了。挺好的站点，因为版权问题不得已关掉了。惆怅……不过目前还好，RSS还没停。依旧惆怅……</p>
+        <p>大三刚刚结束，学院根据前三个学年的成绩发布了预排名表。在签字确认之前当然还是自己算算比较放心，所以写了这个小脚本用来计算自己上学以来的所有学科的加权平均分（不包括任选课）</p>
+<h3 id="截图">截图</h3><p>因为教务系统加了验证码，所以这次使用了GUI。但是我只会用Tkinter，所以别期待太好看。大概就长下面这样了。</p>
+<p>登录界面：<br><a href="http://pic.yupoo.com/hansnow/ENIER1y8/aN0Pm.png" target="_blank" rel="external">登录界面</a></p>
+<p>错误提示：<br><a href="http://pic.yupoo.com/hansnow/ENIERueb/4q6NA.png" target="_blank" rel="external">错误提示</a></p>
+<p>主界面：<br><a href="http://pic.yupoo.com/hansnow/ENIERN0y/kRZWO.png" target="_blank" rel="external">主界面</a></p>
+<h3 id="使用说明">使用说明</h3><h4 id="源码方式">源码方式</h4><p>在使用源码方式运行前，请确保你已经安装了Python环境（目前只支持2.X），并安装了<code>requests</code>、<code>beautifulsoup4</code>、<code>Pillow</code>这三个库（项目源码中附带了<code>requirements.txt</code>文件）</p>
+<p>从<a href="https://github.com/hansnow/bupt-wavg-score" target="_blank" rel="external">项目地址</a>克隆源码，然后执行<code>./score.py</code>即可。</p>
+<h4 id="可执行文件（未完成）">可执行文件（未完成）</h4><p>双击下载下来的EXE文件即可。<br>计划用cx_Freeze打包一下，估计明天才有时间弄了。</p>
+<h3 id="写在后面">写在后面</h3><ul>
+<li>强烈推荐使用源码方式运行，程序代码都看得到，如果出了问题自己调试起来也方便</li>
+<li>非常不愿意打包EXE，毕竟直接给可执行文件的话总会有人说三道四。如果选择可执行文件方式运行的话请自行承担所有风险</li>
+<li>草草发布，我只在Win8下测试了。肉身不在学校，只能Mac开虚拟机开发，超苦逼的。不过我猜其他环境问题应该不大，尤其是*nix系，最可能出问题的地方应该是字符串编码</li>
+<li>代码在<a href="https://github.com/hansnow/bupt-wavg-score" target="_blank" rel="external">Github</a>上，使用中出现什么问题可以直接在这篇文章下评论或者在去<a href="https://github.com/hansnow/bupt-wavg-score" target="_blank" rel="external">Github</a>开issue</li>
+<li>祝大家保研/出国/考研成功！</li>
+</ul>
 
       
     </div>
@@ -241,18 +260,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/01/04/Hello-2015/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hi! 2015!
-        
-      </div>
-    </a>
   
-  
-    <a href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">当我再一次谈论起奋斗时，我在想些什么</div>
+    <a href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">给妹子看的简易翻墙教程</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
