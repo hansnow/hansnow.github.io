@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/tkinter/" style="font-size: 10px;">tkinter</a> <a href="/tags/感冒/" style="font-size: 10px;">感冒</a> <a href="/tags/教务/" style="font-size: 10px;">教务</a> <a href="/tags/翻墙/" style="font-size: 10px;">翻墙</a> <a href="/tags/随想/" style="font-size: 10px;">随想</a>
+						<a href="/tags/BYRBT/" style="font-size: 10px;">BYRBT</a> <a href="/tags/LAMP/" style="font-size: 10px;">LAMP</a> <a href="/tags/tkinter/" style="font-size: 10px;">tkinter</a> <a href="/tags/vsftpd/" style="font-size: 10px;">vsftpd</a> <a href="/tags/感冒/" style="font-size: 10px;">感冒</a> <a href="/tags/教务/" style="font-size: 10px;">教务</a> <a href="/tags/翻墙/" style="font-size: 10px;">翻墙</a> <a href="/tags/评教/" style="font-size: 10px;">评教</a> <a href="/tags/随想/" style="font-size: 10px;">随想</a>
 					</div>
 				</section>
 				
@@ -363,6 +363,87 @@
 
 
   
+    <article id="post-bupt-pingjiao" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/01/09/bupt-pingjiao/" class="article-date">
+  	<time datetime="2015-01-09T01:38:17.000Z" itemprop="datePublished">Jan 9 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/09/bupt-pingjiao/">北邮教务系统评教脚本</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>2015年01月09日更新</strong></p>
+<p><strong>由于教务系统的地址变更以及验证码的加入，Python版的评教脚本已经失效，请使用javascript版</strong></p>
+<p>每个学期末都烦心事儿不断，评教这件小事儿还非得过来掺合掺合。扒着眼睛找那个巨小无比的选择按钮真实让人烦躁啊。作为死工科生，总得做点什么。于是就写了个评教脚本。</p>
+<p>总共有两个版本（考虑到坑爹的windows，实际上是三个）</p>
+<ul>
+<li>JavaScript版</li>
+<li>Python版</li>
+<li>Py4win版（src+exe）</li>
+</ul>
+<p>这三个版本有点儿不一样。Javascript版就是一串JS代码，直接在浏览器中运行即可，不需要额外下载安装任何东西，但是缺点是每次只能评一位老师，也就是说你还是得运行十几次代码才能完成教学评估。Python版是一个.py文件，在大多数Linux/OSX上都能直接运行，而且能一次性完成评教，是真正的“一键评教”。单独把Windows割裂出来是因为编码问题，cmd的默认编码是gb2312，于是就出现了乱码，于是把Python版的代码做一些编码上的处理就变成了Py4win版，考虑到大部分windows下没安装Python，于是用py2exe打包了一个exe，算作是Py4win版的一部分吧。</p>
+<p>下面开始挨个介绍使用方法。</p>
+<h2 id="JavaScript版（一般般推荐）">JavaScript版（一般般推荐）</h2><p>复制下面这串代码(有结构的未压缩版请看文章最后)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:<span class="keyword">if</span>(<span class="built_in">window</span>.document.title==<span class="string">"URP 综合教务系统 - 教学评估 - 教学评估"</span>)&#123;x=<span class="built_in">window</span>.frames[<span class="number">1</span>].frames[<span class="number">2</span>].document.getElementsByTagName(<span class="string">"input"</span>)&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.document.title==<span class="string">"问卷评估页面"</span>)&#123;x=<span class="built_in">window</span>.document.getElementsByTagName(<span class="string">"input"</span>)&#125;<span class="keyword">else</span>&#123;alert(<span class="string">"请确认一个你现在是不是处于正确的页面上，本程序只能在教学评估页面运行！"</span>)&#125;data=<span class="keyword">new</span> <span class="built_in">Array</span>();<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;x.length;i++)&#123;<span class="keyword">if</span>(x[i].type==<span class="string">"hidden"</span>)&#123;data.push(x[i].value)&#125;&#125;;<span class="function"><span class="keyword">function</span> <span class="title">post</span>(<span class="params">path,params,method</span>)</span>&#123;method=method||<span class="string">"post"</span>;<span class="keyword">var</span> form=<span class="built_in">document</span>.createElement(<span class="string">"form"</span>);form.setAttribute(<span class="string">"method"</span>,method);form.setAttribute(<span class="string">"action"</span>,path);<span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> params)&#123;<span class="keyword">if</span>(params.hasOwnProperty(key))&#123;<span class="keyword">var</span> hiddenField=<span class="built_in">document</span>.createElement(<span class="string">"input"</span>);hiddenField.setAttribute(<span class="string">"type"</span>,<span class="string">"hidden"</span>);hiddenField.setAttribute(<span class="string">"name"</span>,key);hiddenField.setAttribute(<span class="string">"value"</span>,params[key]);form.appendChild(hiddenField)&#125;&#125;<span class="built_in">document</span>.body.appendChild(form);form.submit()&#125;post(<span class="string">'http://jwxt.bupt.edu.cn/jxpgXsAction.do?oper=wjpg'</span>,&#123;<span class="string">'wjbm'</span>:data[<span class="number">0</span>],<span class="string">'bpr'</span>:data[<span class="number">1</span>],<span class="string">'pgnr'</span>:data[<span class="number">2</span>],<span class="string">'0000000021'</span>:<span class="string">'10_0.95'</span>,<span class="string">'0000000022'</span>:<span class="string">'10_0.95'</span>,<span class="string">'0000000023'</span>:<span class="string">'5_0.95'</span>,<span class="string">'0000000024'</span>:<span class="string">'20_0.95'</span>,<span class="string">'0000000025'</span>:<span class="string">'10_0.95'</span>,<span class="string">'0000000026'</span>:<span class="string">'5_0.95'</span>,<span class="string">'0000000027'</span>:<span class="string">'5_0.95'</span>,<span class="string">'0000000028'</span>:<span class="string">'20_0.95'</span>,<span class="string">'0000000029'</span>:<span class="string">'10_0.95'</span>,<span class="string">'0000000030'</span>:<span class="string">'5_0.95'</span>,<span class="string">'zgpj'</span>:<span class="string">'老师讲课很认真的啦~'</span>&#125;,<span class="string">"post"</span>);</span><br></pre></td></tr></table></figure>
+<p>登录教务系统，打开教学评估页面，选择一门课程进行评估，于是就到了下面这个页面（由于测试的关系我已经评完了）<br><img src="http://pic.yupoo.com/hansnow/DMS44EHo/140HRd.png" alt=""></p>
+<p>然后，在浏览器的<strong>地址栏</strong>中粘贴刚刚复制的代码，注意，一定要带前面的<code>javascript:</code>，有些浏览器由于安全方面的考虑会自动过滤掉这串字符，这时就需要我们手动加上。粘贴好之后按回车，脚本会自动完成选择和提交的动作。默认都选“优”也就是第二档。</p>
+<p>还有两种使用方式可以参考：</p>
+<ul>
+<li>把这段代码加到书签里，到评估页面后直接点书签就行了</li>
+<li>在浏览器开发者工具的Console中执行</li>
+</ul>
+<h1 id="Python版（最推荐）">Python版（最推荐）</h1><p>如果你用的是Linux/OSX，那么在安装完<code>BeautifulSoup</code>后就可以直接调用了。</p>
+<p>BeautifulSoup安装命令：<code>sudo pip install beautifulsoup4</code>或<code>sudo easy_install beautifulsoup4</code></p>
+<p>运行脚本：<code>python pingjiao.py</code></p>
+<p>运行效果大概就是下面这样<br><img src="http://pic.yupoo.com/hansnow/DMTG3Qbt/CoUkb.png" alt="脚本运行效果"></p>
+<h1 id="Py4win版（src推荐，exe非常不推荐）">Py4win版（src推荐，exe非常不推荐）</h1><p>如果你在windows上装了python，那么使用方法和Python版完全相同，装好BeautifulSoup就能用了。</p>
+<p>如果没装，但是你还非常想用的话，那只能用exe版本了。exe版本使用非常简单，双击“评教.exe”运行就行了。</p>
+<p>exe版本使用Py4win版的src+py2exe打包，使用上没有任何问题，但是我不推荐用。直接给可执行文件是个很敏感的事儿，你完全可以说我植入了什么奇怪的东西，虽然我什么都没干。所以如果你使用exe版的话，你必须<strong>自己承担这带来的一切后果</strong>。有点危言耸听了，但是永远要相信「6L+Z5Liq5LiW55WM5LiK5bCP5Lq66L+Y5piv5oy65aSa55qE」。</p>
+<h1 id="所有的文件来这儿下载">所有的文件来这儿下载</h1><p>所有源码都放在github上：<a href="https://github.com/hansnow/bupt-pingjiao" target="_blank" rel="external">https://github.com/hansnow/bupt-pingjiao</a><br>Py4win版的exe文件到这个地址下载：<a href="http://pan.baidu.com/s/1c09v6Ru" target="_blank" rel="external">http://pan.baidu.com/s/1c09v6Ru</a><br>BeautifulSoup网站：<a href="http://www.crummy.com/software/BeautifulSoup" target="_blank" rel="external">http://www.crummy.com/software/BeautifulSoup</a></p>
+<p>感谢 @qiukun 大神的指导。良师益友没得说~ </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/评教/">评教</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+  
     <article id="post-Hello-2015" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -578,11 +659,11 @@
 
 
   
-    <article id="post-young-couple-in-2012" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-byrbt-thanks-cheater" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2014/10/06/young-couple-in-2012/" class="article-date">
-  	<time datetime="2014-10-06T13:31:35.000Z" itemprop="datePublished">Oct 6 2014</time>
+      <a href="/2014/10/15/byrbt-thanks-cheater/" class="article-date">
+  	<time datetime="2014-10-15T01:36:37.000Z" itemprop="datePublished">Oct 15 2014</time>
 </a>
     </div>
   
@@ -595,7 +676,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/06/young-couple-in-2012/">记途中的一对情侣</a>
+      <a class="article-title" href="/2014/10/15/byrbt-thanks-cheater/">北邮人BT“说谢谢”刷分</a>
     </h1>
   
 
@@ -604,19 +685,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>国庆假期回家，在自己的房间里翻出来高中时候的笔记本。翻了翻，发现了一些幼稚的文字。发上来留个纪念吧。下面这篇应该是2012年3月的。</p>
+        <h1 id="前言">前言</h1><p>今天上午刚刚搬家到新的博客，这个博客使用Markdown语法写作，靠DropBox同步文章，感觉还是有点儿意思呢。之前的Octopress博客<a href="http://coding.yunbo.li" target="_blank" rel="external">http://coding.yunbo.li</a>访问速度实在是太差，而且到现在为止我还是没学会怎么在上面发布文章，这时Farbox出现了，索性转了过来。btw，以前的负能量小站已经迁移到了<a href="http://laodao.yunbo.li" target="_blank" rel="external">http://laodao.yunbo.li</a></p>
+<p>目前这个系统的大体流程已经搞明白了，但是和其他博客系统一样，主题修改还是让我头疼。</p>
+<p>不过也管不了那么多啦，等把一切都搞明白了再开始写不知道要等到什么时候了，索性就这样写吧，反正文章丢不了。</p>
+<p>今天给大家带来的是一个Python写的小玩具，在北邮人BT上说谢谢刷魔力值。</p>
+<p>在北邮人BT上有这么一条规则：<br><img src="http://pic.yupoo.com/hansnow/DMRSHelw/15mpHb.png" alt="BT上通过说谢谢得到魔力值的规则"></p>
+<p>而且除了对每个种子只能说一次之外，系统对说谢谢这个功能没有其他限制。BYRBT上大概有4W个种子，也就是说我们可以通过说谢谢得到4W魔力值。我们要做的就是靠Python来实现说谢谢的功能从而获得魔力值。</p>
+<p>好，了解完思路，让我们进入实战环节。</p>
+<h1 id="说谢谢背后的原理">说谢谢背后的原理</h1><p>当我们对一个种子“说谢谢”的时候，浏览器干了什么？</p>
+<p>首先，我们打开浏览器（以Chrome为例了，据说FireFox的FireBug也很好用），进入BT随便打开一个种子，比如我们打开这个<a href="http://bt.byr.cn/details.php?id=152137&amp;hit=1" target="_blank" rel="external">http://bt.byr.cn/details.php?id=152137&amp;hit=1</a>，页面拉到种子信息那里，我们可以看到说谢谢按钮。<br><img src="http://pic.yupoo.com/hansnow/DMRSsAqL/RbgW5.png" alt="说谢谢按钮"><br>这时，请出我们今天的第一个大杀器——Chrome开发者工具[^1]。</p>
+<p>Chrome开发者工具是随Chrome浏览器一起发布的面向开发人员的网页调适工具，通过它，我们可以看到网页背后的技术细节。在Windows下，我们可以用<code>F12</code>打开开发者工具，在OSX下，快捷键为<code>Command+Option+I</code>。</p>
+<p>打开开发者工具后，我们会开到这样一个窗口。最上方是功能选项卡，不同的选项卡下对应着不同的功能，我们用的比较多的是<code>Elements</code>和<code>Network</code>选项卡。在<code>Elements</code>选项卡中，我们可以方便地以标准的树状结构浏览HTML元素，通常这对了解网页布局和网页元素的细节是很有帮助的。<br><img src="http://pic.yupoo.com/hansnow/DMRTTvbg/jG4ox.png" alt="Chrome开发者工具"></p>
+<p><code>Network</code>选项卡主要用来显示网页背后的数据交互，也就是用来查看HTTP请求。这里有两个按钮需要注意，首先是左上角的那个红点，它的左右和录音机的录制键差不多，红色表示记录状态，灰色表示非记录状态。它旁边的那个灰色叉子按钮是Clear键，用来删除已有的记录。在这一行的最右侧是<code>Preserve log</code>选项，如果它处于选中状态，那么即使网页刷新或者跳转，已有的记录依然会被保留。（默认情况下一旦页面刷新，已有记录会被清除）<br><img src="http://pic.yupoo.com/hansnow/DMRTTRfm/Z02dR.png" alt="Network标签中两个比较重要的按钮"></p>
+<p>现在我们要用到<code>Network</code>功能，所以切换到<code>Network</code>选项卡。然后，我们点击“说谢谢”按钮。我们观察到，<code>Network</code>选项卡下出现了一个条目：<br><img src="http://pic.yupoo.com/hansnow/DMRTUjgi/LnVxV.png" alt="关键POST出现"></p>
+<p>这里我们需要关注两个点，首先是<code>Path</code>==&gt;<code>thanks.php</code>。然后是<code>Method</code>==&gt;<code>POST</code>，也就是说，在我们点“说谢谢”按钮的时候，实际上是向<code>thanks.php</code>发送了一个<code>POST</code>请求[^2]。</p>
+<p>点击这个POST请求查看详情，注意框框中的内容<code>Request URL:http://bt.byr.cn/thanks.php</code>和<code>id:152137</code>。第一个是我们发送POST请求的URL，也就是说，是这个URL接受了浏览器发送的请求；第二个是请求过程中发送的参数（表），这里也就是种子ID（还记得我们最开始打开了哪个URL吗？）</p>
+<p>到此，我们已经清楚的了解了在点击“说谢谢”按钮时，浏览器都做了哪些事儿。那接下来就是用Python模拟这个动作了。</p>
+<h1 id="用Python实现">用Python实现</h1><p>让我们整理一下思路，说谢谢的核心就是一个POST请求，这个请求有两个变量，<code>Request URL</code>是固定的，<code>id</code>是种子ID。也就是说只要我们得到多少种子ID也就会得到相应的魔力值。那么接下来我们要做的就是抓取全站的种子ID。</p>
+<p>打开一个种子页面<a href="http://bt.byr.cn/torrents.php" target="_blank" rel="external">http://bt.byr.cn/torrents.php</a>，然后右键-&gt;查看网页源代码，我们发现有很多类似这样的代码：</p>
+<ul>
+<li><code>href=&quot;details.php?id=152186&amp;amp;hit=1&quot;</code></li>
+<li><code>href=&quot;viewsnatches.php?id=152186&quot;</code></li>
+<li><code>href=&quot;comment.php?action=add&amp;amp;pid=152186&amp;amp;type=torrent&quot;</code></li>
+<li><code>href=&quot;download.php?id=152186&quot;</code></li>
+</ul>
+<p>这里面都包含了我们需要的种子ID<code>152186</code>，所以方法就有了，只要通过正则表达式将网页源码中的种子ID匹配出来就可以了。</p>
+<p>于是，我们祭出今天的第二个大杀器——BeatutifulSoup。</p>
+<blockquote>
+<p>Beautiful Soup 是用 Python 写的一个 HTML/XML 的解析器，它可以很好的处理不规范标记并生成剖析树。通常用来分析爬虫抓取的web文档。对于 不规则的 Html文档，也有很多的补全功能，节省了开发者的时间和精力。</p>
 </blockquote>
-<p>3月中旬，我去外地考试，在回家的班车上看见了一对情侣，他们是那么朴素，自然，衣着也并不华丽。女生脸上有淡淡的高原红，她话不多，一举一动都带着几分害羞。男生显得高大，结实。</p>
-<p>这对情侣带着两只大大的旅行箱，看得出已经在旅途上奔波了好久。上车后，由于人多，他们不得不分开坐，女生坐在班车的中间位置，后背朝前，正好面向我。男生坐在了大后面。此时女生显得十分不安，脸上没有了笑意，并开始不断的咬嘴唇。她变得更加少言，买票的问她问题，她也只是配合着手势简单的回答。她就这样沉默了好久。这时有几个乘客要下车，男生终于挤到了前面，可是座位还是不够，所以女生坐在了他怀里。</p>
-<p>雨停了，花朵张开笑脸，对着太阳微笑。女生终于笑了，她笑得那样自然，亲切。也许对她来说，只有和那男生在一起时，才有安全感，这就是爱，一份正经历着奔波洗涤的爱。看得出，他们俩并不富裕，但他们的这份爱却值得所有人羡慕，就像樱花的粉色，让人感到无比舒适。</p>
-<p>我的文笔差到了极点，一件无比美好的事被我描写成这样。不管将来如何，我希望他们此时此刻正体会着对方浅浅的爱。我还年少，经世不多，我深知自己没有能力去评价什么是爱，但内心告诉我，这就是爱。</p>
+<p>简单说，BeautifulSoup的作用是让我们更方便的在HTML代码中找东西。</p>
+<h2 id="材料已备齐，开搞">材料已备齐，开搞</h2><p>从这里开始我们按事件发生的先后顺序讲……要不然我怕讲乱了……</p>
+<h2 id="登录">登录</h2><p>登录是以后所有操作的基础，所以我们先看看登录的过程。打开Chrome开发者工具，找到Network选项，把Preserve log选中。然后我们登录一下BT<br><img src="" alt="很不幸，BT今天挂掉了，截图只能以后搞了"></p>
+<p>我们可以看到，登录的POST请求中发出了四个数据username、password、imagestring和imagehash。前两个不用说，是你的用户名密码。imagestring是你输入的验证码字符，imagehash是与这张验证码图片对应的一个hash值，只有hash值和你输入的string值成功匹配时你才能登录。</p>
+<p>好像说着说着就有点罗嗦了，有空慢慢写吧……to be continued</p>
 
       
     </div>
     
     <div class="article-info article-info-index">
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BYRBT/">BYRBT</a></li></ul>
+	</div>
+
       
 
       
@@ -633,11 +745,11 @@
 
 
   
-    <article id="post-a-new-start" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-lamp-and-vsftpd-setup" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2014/09/10/a-new-start/" class="article-date">
-  	<time datetime="2014-09-10T09:03:38.000Z" itemprop="datePublished">Sep 10 2014</time>
+      <a href="/2014/10/10/lamp-and-vsftpd-setup/" class="article-date">
+  	<time datetime="2014-10-10T01:31:08.000Z" itemprop="datePublished">Oct 10 2014</time>
 </a>
     </div>
   
@@ -650,7 +762,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/10/a-new-start/">唠叨，从这里开始</a>
+      <a class="article-title" href="/2014/10/10/lamp-and-vsftpd-setup/">Ubuntu下的LAMP和vsftpd配置</a>
     </h1>
   
 
@@ -659,17 +771,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近一周接触了很多javascript的东西，从最开始的基本javascript语法，到jQuery，然后是coffeescript，最后到了node.js。昨晚看到了一个基于nodej.s的项目——hexo，当即被它漂亮的外观吸引。折腾到今天下午，终于算把博客搭建起来了。</p>
-<p>这个小站会取代过去的laodao.yunbo.li，作为我矫情、发牢骚的地方。小站虽然搭建在Github Pages上，但是前端库文件都是用的BaiduCDN，所以速度应该还说得过去。今天晚上准备把laodao.yunbo.li给停掉了，又有一段记忆要被尘封。</p>
-<p>感觉大二这一年还是让我成长了不少，至少让我在遇到那么多事儿的情况下不那么心慌了。搁过去，这么多事儿压在我身上的话，估计早就焦虑得睡不着觉了。虽然现在还是会因为这些琐事头疼，但还好，不会再像过去一样——心里波涛汹涌，翻江倒海。</p>
-<p>过去的一段时间以“忙”为理由推掉了好多好多事儿，比如健身，比如写博客，比如读书。希望从这个小站建立开始，我能改掉这个坏毛病吧。昨天跑步的时候得到一个体会，按时间比按量来的舒服，30分钟一到，我马上停下来，因为我知道还有别的事儿要做，不能咬着牙在这里跑步。做其他事儿也一样，在自己还算舒服的情况下，尽量做就好。时间点到了，马上投身到下一件该做的事儿上。</p>
-<p>如果让我用一句诗来描述最近的心态的话，那就是——悟以往之不谏，知来者之可追.</p>
+        <h2 id="写在前头">写在前头</h2><p>很难想象我竟然起了一个这么 ordinary 的 tilte，事实上标题里说的这个问题已经虐了我一个晚上，尤其是vsftpd，当初在树莓派上配置过vsftpd，隐约记得没有多长时间就配好了。结果隔了半年再次尝试vsftpd的时候，这货狠狠地抽了我一巴掌，死活配不对，尤其是用户那一块儿，简直烦死了。好不容易折腾好了，马克一下，防止下次被虐。</p>
+<h2 id="环境说明">环境说明</h2><p>写这篇文章的时候没在学校，手上只有一台弱不经风的air，小心翼翼地在虚拟机里装了Ubuntu Server 12.04。网卡用了桥接模式，所以虚拟机里的系统得到的是类似192.168.1.xxx这样的IP。其他的就没什么好说的了。</p>
+<h2 id="先换个源">先换个源</h2><p>北京地区的推荐北京交通大学或者搜狐的源，速度超快哦~如果你在教育网的话那就随意了，清华、北理工、华中科大等等速度都好得不得了。</p>
+<p>以北交源为例，从<a href="http://mirror.bjtu.edu.cn/cn/howto.html" target="_blank" rel="external">这个页面</a>查看源地址，然后修改sources.list。</p>
+<p>修改之前，先备份一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></table></figure></p>
+<p>然后放心大胆地修改sources.list即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<h2 id="LAMP安装">LAMP安装</h2><p>LAMP是指Linux、Apache、MySql和PHP。安装过程很简单，麻烦的是配置。首先在终端里运行下面的命令进行LAMP的安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apache2 mysql-server mysql-client php5 php5-gd php5-mysql</span><br></pre></td></tr></table></figure></p>
+<p><strong>安装过程中需要设置mysql的root密码，这个很重要，请千万记牢！</strong><br><img src="http://pic.yupoo.com/hansnow/DTxjWMcx/4kwzG.png" alt="设置mysql的root密码"><br>由于LAMP大部分操作与/var/www目录相关，为了方便，修改该目录的权限为普通用户可访问。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 /var/www/</span><br></pre></td></tr></table></figure></p>
+<h2 id="phpmyadmin的安装">phpmyadmin的安装</h2><p>phpmyadmin可以让我们方便的通过web管理服务器上的mysql数据库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpmyadmin</span><br></pre></td></tr></table></figure></p>
+<p>在安装过程中会要求选择Web server：apache2或lighttpd，选择apache2<br><img src="http://pic.yupoo.com/hansnow/DTxjWFrw/M5gct.png" alt="选择数据库"><br>然后会要求输入一个密码，建议和mysql的root密码设置成一样的。<br><img src="http://pic.yupoo.com/hansnow/DTxjX38M/Bjp3F.png" alt="配置phpmyadmin"><br>然后把phpmyadmin的目录链接到/var/www里面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /usr/share/phpmyadmin /var/www</span><br></pre></td></tr></table></figure></p>
+<p>到此，LAMP和phpmyadmin的安装就完成了，这时候在浏览器中输入虚拟机的IP地址，可以看到“It works！“的提示，说明Apache已经正常工作了。进入phpmyadmin目录，就像这样192.168.1.xxx/phpmyadmin，就可以看到phpmyadmin的首页了，用户名root，密码用前面几步输入的root密码就可以登录啦。<br><img src="http://pic.yupoo.com/hansnow/DTxjDMyq/vo1Xk.png" alt="phpmyadmin登陆界面"><br><img src="http://pic.yupoo.com/hansnow/DTxjWoFP/14itAl.png" alt="phpmyadmin主界面"></p>
+<h2 id="万恶的vsftpd">万恶的vsftpd</h2><p><em>本来是想弄成多用户的，每个用户只能操作自己目录内的文件，但是操作的时候遇到了一些问题，waiting for update</em><br>我们的应用场景是有多个FTP用户，分别对应着不同的Home目录，并且彼此只能在各自的目录内进行操作。</p>
+<p>先安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install vsftpd</span><br></pre></td></tr></table></figure></p>
+<p>然后我们建立一个ftp用户，比如叫ftpuser<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo useradd ftpuser&#10;sudo passwd ftpuser</span><br></pre></td></tr></table></figure></p>
+<p>为ftpuser建立用户目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /home/ftpuser</span><br></pre></td></tr></table></figure></p>
+<p>改变权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R ftpuser /home/ftpuser</span><br></pre></td></tr></table></figure></p>
+<p>用户部分处理完，我们开始配置vsftpd<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/vsftpd.conf</span><br></pre></td></tr></table></figure></p>
+<p>参考下面的配置</p>
+<blockquote>
+<h1 id="禁止匿名用户登录">禁止匿名用户登录</h1><pre><code>anonymous_<span class="built_in">enable</span>=NO
+<span class="comment">#本地用户可用</span>
+<span class="built_in">local</span>_<span class="built_in">enable</span>=YES
+<span class="comment">#可用写操作</span>
+write_<span class="built_in">enable</span>=YES
+<span class="comment">#权限掩码(设置上传的文件为所有用户可读写,这样Apache就有读写权限了)</span>
+<span class="built_in">local</span>_<span class="built_in">umask</span>=<span class="number">000</span>
+<span class="comment">#不须要显示某目录下文件信息</span>
+dirmessage_<span class="built_in">enable</span>=NO
+<span class="comment">#加点登录后的提示语句</span>
+ftpd_banner=Hello~~
+</code></pre></blockquote>
+<p>重启vsftpd，上面的配置就生效啦~<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/vsftpd restart</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考文档">参考文档</h2><p><a href="http://www.linuxidc.com/Linux/2012-05/61079.htm" target="_blank" rel="external">http://www.linuxidc.com/Linux/2012-05/61079.htm</a><br><a href="http://www.coolni.cn/me/?post=71)" target="_blank" rel="external">http://www.coolni.cn/me/?post=71)</a></p>
 
       
     </div>
     
     <div class="article-info article-info-index">
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LAMP/">LAMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vsftpd/">vsftpd</a></li></ul>
+	</div>
+
       
 
       
@@ -686,6 +831,10 @@
 
 
   
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
