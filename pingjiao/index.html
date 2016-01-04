@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>北邮教务系统评教脚本</title>
+    <style>
+        *{margin:0; padding:0;}
+        body {background: #FDF9F9; font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeiti", "Helvetica","Arial","Verdana","sans-serif"; font-size:16px; color: #333333;}
+        .frame{width: 720px; margin:0 auto 30px;}
+        .main {text-align:center;padding-top: 50px;}
+        .main h1 {padding: 50px 0 40px;letter-spacing:-2px;}
+        .card { border-radius: 3px;box-shadow: 0 0 2px rgba(0,0,0,0.4); background: #ffffff;margin:0 100px;padding:20px;}
+        p {line-height: 28px; text-align: left; }
+        p .first-letter {font-size: 60px;float:left;vertical-align:top;margin:10px;font-weight: bold;}
+        .main ul {margin-top: 20px;}
+        .main ul li{list-style-type: none; color: #DF6558; text-align: left; width: 300px; margin: 10px auto; font-weight: bold;}
+        .main ul li span {float:right;}
+        .main ul li span a {color:#DF6558;}
+        .main ul li span:before {content: "@";}
+        .main ul li a { text-decoration: none; color: #333333; }
+        hr {height:0; border:0; border-top: 1px solid rgba(0,0,0,0.1); margin: 10px 5px;}
+        .text-left { text-align: left; }
+        .text-center { text-align: center; }
+        .text-title { font-size: 20px; font-weight:bold;}
+        .text-desc { font-size: 14px; opacity: 0.8;}
+        .text-margin { margin-right: 20px; }
+        .bookmarklet-icon { text-decoration: none; }
+        .bookmarklet-icon span {display: none;}
+        .bookmarklet-icon:before {content: "<bookmarklet/>"; color: #DF6558; font-weight: bold; padding: 10px 15px; display: inline-block; margin: 10px; border-radius: 10px; border: 2px solid #DF6558; font-size: 22px; }
+        .bookmarklet-icon.dev:before {content: "<bookmarklet dev=1/>";}
+        .disable {opacity: 0.2; }
+        .bg-gray {background: #eeeeee; }
+        .text-gray {color:#999999;}
+        .image {padding:5px;background:#fff;box-shadow:0 0 2px rgba(0,0,0,0.5);border-radius:2px;margin:10px auto;display:block;}
+        .link {text-decoration: none; background: #eeeeee; color:#333333; padding:2px 5px;box-shadow: 0 0 2px rgba(0,0,0,0.1); border-radius: 2px;border:1px solid rgba(0,0,0,0.2);}
+        .extension-download-buttons img {width: 100px;}
+    </style>
+</head>
+<body>
+    <div class="frame main">
+        <img src="./logo.png" width="100" style="opacity:0.8">
+        <h1 class="text-gray">
+            北邮教务系统评教脚本
+        </h1>
+        <div class="card">
+            <p>
+                教务系统评教脚本主要用来解决“不评教就不让你查成绩”的臭流氓问题，让你不用痛苦的去看那巨小无比的字体和巨多无比的选项。目前默认选项都是
+                “优”，默认评语都是“讲课不错”，大过年的，老师也都不容易是吧。
+                <br><br>
+                目前脚本处于快糙猛状态，没什么操作提示和错误处理，请将就使用。脚本理论上也支持其他“圣清元”教务系统，请自行调节参数。
+            </p>
+            <hr/>
+            <a href="https://github.com/hansnow/bupt-pingjiao" class="text-gray">项目源码</a>
+
+        </div>
+    </div>
+    <div class="frame">
+        <div class="card">
+            <p class="text-center text-title">使用 收藏夹脚本</p>
+            <hr>
+            <p class="text-center">拖拽下面图标到收藏夹</p>
+            <p class="text-center"><a class="bookmarklet-icon" href="javascript:void(function(u,s){s=document.body.appendChild(document.createElement('script'));s.src=u+'?ts='+Date.now();s.charset='UTF-8'}('http://hann.sinaapp.com/static/pingjiao.js'))"><span>评教脚本</span></a></p>
+            <hr>
+            <p class="text-center">然后在“教学评估”页面点击这个*收藏*就可以了</p>
+        </div>
+    </div>
+
+
+    <div class="frame">
+        <hr style="margin-top:50px"/>
+        <div class="frame">
+            <p class="text-center text-gray">本页面模板fork自<a class="link" href="https://github.com/zythum">@Zythum</a>MAMA2</p>
+            <p class="text-center text-gray">Powered By Xiaohan</p>
+            
+
+        </div>
+    </div>
+</body>
+</html>
