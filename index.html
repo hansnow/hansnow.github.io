@@ -1,402 +1,564 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>Han</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="嗯，小寒废话最多了。">
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="小寒,博客,Python,NodeJS,技术,生活" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="嗯，小寒废话最多了。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Han">
-<meta property="og:url" content="http://yunbo.li/index.html">
+<meta property="og:url" content="http://hansnow.me/index.html">
 <meta property="og:site_name" content="Han">
 <meta property="og:description" content="嗯，小寒废话最多了。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Han">
 <meta name="twitter:description" content="嗯，小寒废话最多了。">
-  
-    <link rel="alternative" href="/atom.xml" title="Han" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Han </title>
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img src="http://pic.yupoo.com/hansnow/DMXxBL1N/6GcOH.png" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
-			
-		</a>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">XiaoHan</a></h1>
-		</hgroup>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-		
-		<p class="header-subtitle">小寒的家</p>
-		
+  
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/hansnow" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="http://weibo.com/hansnow2012" title="weibo">weibo</a>
-					        
-								<a class="google" target="_blank" href="https://plus.google.com/108861316402693107255/posts" title="google">google</a>
-					        
-								<a class="twitter" target="_blank" href="https://twitter.com/hansnow2012" title="twitter">twitter</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/BYRBT/" style="font-size: 10px;">BYRBT</a> <a href="/tags/LAMP/" style="font-size: 10px;">LAMP</a> <a href="/tags/tkinter/" style="font-size: 10px;">tkinter</a> <a href="/tags/vsftpd/" style="font-size: 10px;">vsftpd</a> <a href="/tags/感冒/" style="font-size: 10px;">感冒</a> <a href="/tags/教务/" style="font-size: 10px;">教务</a> <a href="/tags/翻墙/" style="font-size: 10px;">翻墙</a> <a href="/tags/评教/" style="font-size: 10px;">评教</a> <a href="/tags/随想/" style="font-size: 10px;">随想</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://jialin.wang/">Cater</a>
-			        
-			        </div>
-				</section>
-				
 
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">伪极客/伪码农/爱跑步/业余吃货</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Han</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">小寒的家</p>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">XiaoHan</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="http://pic.yupoo.com/hansnow/DMXxBL1N/6GcOH.png" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">XiaoHan</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">小寒的家</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/hansnow" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="http://weibo.com/hansnow2012" title="weibo">weibo</a>
-			        
-						<a class="google" target="_blank" href="https://plus.google.com/108861316402693107255/posts" title="google">google</a>
-			        
-						<a class="twitter" target="_blank" href="https://twitter.com/hansnow2012" title="twitter">twitter</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-weighted-average-score-calculator" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/14/weighted-average-score-calculator/" class="article-date">
-  	<time datetime="2015-07-14T14:54:20.000Z" itemprop="datePublished">Jul 14 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/14/weighted-average-score-calculator/">加权平均成绩计算器</a>
-    </h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
   
 
-      </header>
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+
+    
+
+    
+    
+      
+      
+        
+        
+        
+      
+
       
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
       
-        <p>大三刚刚结束，学院根据前三个学年的成绩发布了预排名表。在签字确认之前当然还是自己算算比较放心，所以写了这个小脚本用来计算自己上学以来的所有学科的加权平均分（不包括任选课）</p>
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/14/weighted-average-score-calculator/" itemprop="url">
+                  加权平均成绩计算器
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-07-14T22:54:20+08:00" content="Jul 14 2015">
+              Jul 14 2015
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/14/weighted-average-score-calculator/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/14/weighted-average-score-calculator/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>大三刚刚结束，学院根据前三个学年的成绩发布了预排名表。在签字确认之前当然还是自己算算比较放心，所以写了这个小脚本用来计算自己上学以来的所有学科的加权平均分（不包括任选课）</p>
 <h3 id="截图">截图</h3><p>因为教务系统加了验证码，所以这次使用了GUI。但是我只会用Tkinter，所以别期待太好看。大概就长下面这样了。</p>
 <p>登录界面：<br><img src="http://pic.yupoo.com/hansnow/ENIER1y8/aN0Pm.png" alt="登录界面"></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tkinter/">tkinter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教务/">教务</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/07/14/weighted-average-score-calculator/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-gfw-bypass-tutorial-for-shanshan" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/" class="article-date">
-  	<time datetime="2015-07-11T07:53:01.000Z" itemprop="datePublished">Jul 11 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/14/weighted-average-score-calculator/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/">给妹子看的简易翻墙教程</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/" itemprop="url">
+                  给妹子看的简易翻墙教程
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-07-11T15:53:01+08:00" content="Jul 11 2015">
+              Jul 11 2015
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/11/gfw-bypass-tutorial-for-shanshan/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>先简单介绍一下翻墙的原理。由于墙的存在，我们的电脑不能和某些网站建立连接，这些网站我们叫做“被GFW认证的网站”。于是，我们需要一台既可以和我们连接，又可以和“被GFW认证的网站”连接的服务器进行中转。所以所谓的翻墙就是通过中转服务器来访问网站。</p>
+      
+
+      
+        
+          <p>先简单介绍一下翻墙的原理。由于墙的存在，我们的电脑不能和某些网站建立连接，这些网站我们叫做“被GFW认证的网站”。于是，我们需要一台既可以和我们连接，又可以和“被GFW认证的网站”连接的服务器进行中转。所以所谓的翻墙就是通过中转服务器来访问网站。</p>
 <h3 id="下载">下载</h3><p>我们需要用到的软件是shadowsocks，你可以从<a href="https://github.com/shadowsocks/shadowsocks-csharp/releases">这里下载</a></p>
 <p>需要说明的一点是：对于<strong>Win8及之后</strong>的系统，需要选择<code>Shadowsocks-win-dotnet4.0-x.x.x.zip</code>这种安装包，对于<strong>Win7及之前的系统</strong>，需要选择<code>Shadowsocks-win-x.x.x.zip</code>这种安装包。</p>
 <p>ps. 因为下载服务器位于Github，所有有些时候不翻墙是无法下载的，于是这个问题就变成了先有鸡还是先有蛋的问题。对于这种情况，我强烈建议找你男朋友解决。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-catch-cold-and-headache-in-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/06/14/catch-cold-and-headache-in-2015/" class="article-date">
-  	<time datetime="2015-06-14T14:15:53.000Z" itemprop="datePublished">Jun 14 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/11/gfw-bypass-tutorial-for-shanshan/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/14/catch-cold-and-headache-in-2015/">病中杂记</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/06/14/catch-cold-and-headache-in-2015/" itemprop="url">
+                  病中杂记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-06-14T22:15:53+08:00" content="Jun 14 2015">
+              Jun 14 2015
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/06/14/catch-cold-and-headache-in-2015/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/06/14/catch-cold-and-headache-in-2015/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <blockquote>
+      
+
+      
+        
+          <blockquote>
 <p>孤独的人是可耻的 ——张楚</p>
 <p>生病的人是痛苦的 ——我</p>
 </blockquote>
 <p>不知道隔了多久，又得了我最擅长的感冒。这次感冒来势汹汹，让我很快进入了生病状态。当然我也没怂，当天我就从自习室撤出来了，从此一周再也没进去过。</p>
 <p>说起我这体弱多病的身体，那真是有年头儿了。记得小时候经常发烧，经常到什么程度呢？家里一直备着输液的所有药品和器具，我妈一旦发现我烧起来了，立马输液伺候。而我经常非常争气地在晚上发烧，所以关于小时候发烧的记忆一直是半夜突然被老妈叫醒，迷迷糊糊的爬起来自己握着手腕（哪儿听说过亲妈给亲儿子输液还用压脉带的？），然后感觉手背上被什么东西咬了一下，管不了那么多了，太困。于是接着睡。就这样，晚上发烧，天亮之前解决，第二天“高高兴兴上学去”，丝毫没耽误学习（摔！）<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/感冒/">感冒</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随想/">随想</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/06/14/catch-cold-and-headache-in-2015/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-bupt-pingjiao" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/01/09/bupt-pingjiao/" class="article-date">
-  	<time datetime="2015-01-09T01:38:17.000Z" itemprop="datePublished">Jan 9 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/06/14/catch-cold-and-headache-in-2015/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/09/bupt-pingjiao/">北邮教务系统评教脚本</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/01/09/bupt-pingjiao/" itemprop="url">
+                  北邮教务系统评教脚本
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-01-09T09:38:17+08:00" content="Jan 9 2015">
+              Jan 9 2015
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/01/09/bupt-pingjiao/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/01/09/bupt-pingjiao/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p><strong>2015年01月09日更新</strong></p>
+      
+
+      
+        
+          <p><strong>2015年01月09日更新</strong></p>
 <p><strong>由于教务系统的地址变更以及验证码的加入，Python版的评教脚本已经失效，请使用javascript版</strong></p>
 <p>每个学期末都烦心事儿不断，评教这件小事儿还非得过来掺合掺合。扒着眼睛找那个巨小无比的选择按钮真实让人烦躁啊。作为死工科生，总得做点什么。于是就写了个评教脚本。</p>
 <p>总共有两个版本（考虑到坑爹的windows，实际上是三个）</p>
@@ -406,447 +568,802 @@
 <li>Py4win版（src+exe）</li>
 </ul>
 <p>这三个版本有点儿不一样。Javascript版就是一串JS代码，直接在浏览器中运行即可，不需要额外下载安装任何东西，但是缺点是每次只能评一位老师，也就是说你还是得运行十几次代码才能完成教学评估。Python版是一个.py文件，在大多数Linux/OSX上都能直接运行，而且能一次性完成评教，是真正的“一键评教”。单独把Windows割裂出来是因为编码问题，cmd的默认编码是gb2312，于是就出现了乱码，于是把Python版的代码做一些编码上的处理就变成了Py4win版，考虑到大部分windows下没安装Python，于是用py2exe打包了一个exe，算作是Py4win版的一部分吧。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/评教/">评教</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/01/09/bupt-pingjiao/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Hello-2015" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/01/04/Hello-2015/" class="article-date">
-  	<time datetime="2015-01-04T09:38:09.000Z" itemprop="datePublished">Jan 4 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/01/09/bupt-pingjiao/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/04/Hello-2015/">Hi! 2015!</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/01/04/Hello-2015/" itemprop="url">
+                  Hi! 2015!
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-01-04T17:38:09+08:00" content="Jan 4 2015">
+              Jan 4 2015
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/01/04/Hello-2015/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/01/04/Hello-2015/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>时间过得真快，转眼就到2015年了。回想起去年的这个时候，我已经住院了。在写这篇日志之前，我又看了看去年在这个时候写的日记，看完之后心里挺不是滋味儿的，当时确实是受了不少委屈。</p>
+      
+
+      
+        
+          <p>时间过得真快，转眼就到2015年了。回想起去年的这个时候，我已经住院了。在写这篇日志之前，我又看了看去年在这个时候写的日记，看完之后心里挺不是滋味儿的，当时确实是受了不少委屈。</p>
 <blockquote>
 <p>既然决定了要住院，我就回学校办手续了，回来那天是12月31号，我还记得当时走出医院的时候我还琢磨着，老天还是挺够意思的，至少没让我在医院跨年。31号那天晚上我请我们宿舍的吃饭，花的不多，还不到300块钱，特别逗的是隔壁的一个菜上到我们的桌子上了，我们义无反顾的就给吃了。虽然吃的不丰盛，但是大家还算高兴。那天晚上，大家似乎也没有太激动，0点，我站在阳台上带头喊了一句：新年快乐。当时百感交集，新年了，这一年的开头就这么累。免不了有点哀伤。</p>
 </blockquote>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/01/04/Hello-2015/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-long-time-no-see-at-the-end-of-2014" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/12/05/long-time-no-see-at-the-end-of-2014/" class="article-date">
-  	<time datetime="2014-12-05T12:18:40.000Z" itemprop="datePublished">Dec 5 2014</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/01/04/Hello-2015/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/05/long-time-no-see-at-the-end-of-2014/">又是一个月，好久不见</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/12/05/long-time-no-see-at-the-end-of-2014/" itemprop="url">
+                  又是一个月，好久不见
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-12-05T20:18:40+08:00" content="Dec 5 2014">
+              Dec 5 2014
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/12/05/long-time-no-see-at-the-end-of-2014/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/12/05/long-time-no-see-at-the-end-of-2014/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>啊，又一个月没来了。一转眼又到了年末，想起去年这个时候，痛苦就要来了，我当然不想让它来。过得真快，一转眼一年又过去了。</p>
+      
+
+      
+        
+          <p>啊，又一个月没来了。一转眼又到了年末，想起去年这个时候，痛苦就要来了，我当然不想让它来。过得真快，一转眼一年又过去了。</p>
 <p>今年刚刚开始，我去车道沟“旅行”，当时心情压抑的不行，同时还有点庆幸，让我在宿舍跨了年。“旅行”期间想了好多事儿啊，当时一点一点地写在了为知笔记里面，而且当时还立志今年一定要好好练练文笔。一整年就快过去了，文笔依然差，写东西依然不勤快。</p>
 <p>人一到某个阶段的末尾就禁不住回忆，今年经历了好多事儿啊。尤其是年中开始去某小公司实习的经历，让我成长了很多。见识了甲方乙方勾心斗角争夺利益，见识了公司里让人恶心的不行的踢皮球现象。网站的项目磨磨唧唧弄到现在，还好有光光，足够强势，一直以来让我们保持主动权，不至于被公司欺负得太厉害。还有就是感恩，感恩这个公司让我认识了这么多好玩儿的同事，大家每天在办公室里逗比的不行，真是开心。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/12/05/long-time-no-see-at-the-end-of-2014/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-what-do-i-think-when-i-talk-about-fighting" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/" class="article-date">
-  	<time datetime="2014-11-04T02:04:20.000Z" itemprop="datePublished">Nov 4 2014</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/12/05/long-time-no-see-at-the-end-of-2014/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/">当我再一次谈论起奋斗时，我在想些什么</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近身边的人多多少少都有点不正常，有的忙着平时的作业、实验等等琐碎的学业，有的里里外外跑来跑去，忙着各种高大上的事业。总之，大家都忙。忙着忙着很多人就会想，我这么瞎折腾是图什么呢？这么做有什么意义吗？想到这儿，一部分人颓了，不折腾了，开始“享受”生活。另一部分人想到了奋斗，他们觉得这是一种向上的生活状态，于是咬咬牙继续拼。</p>
       
     </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
-    <div class="article-info article-info-index">
       
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
 
   
-    <article id="post-2014-Marathon" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2014/10/30/2014-Marathon/" class="article-date">
-  	<time datetime="2014-10-30T02:14:06.000Z" itemprop="datePublished">Oct 30 2014</time>
-</a>
-    </div>
+
   
-  <div class="article-inner">
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/" itemprop="url">
+                  当我再一次谈论起奋斗时，我在想些什么
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-11-04T10:04:20+08:00" content="Nov 4 2014">
+              Nov 4 2014
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/11/04/what-do-i-think-when-i-talk-about-fighting/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近身边的人多多少少都有点不正常，有的忙着平时的作业、实验等等琐碎的学业，有的里里外外跑来跑去，忙着各种高大上的事业。总之，大家都忙。忙着忙着很多人就会想，我这么瞎折腾是图什么呢？这么做有什么意义吗？想到这儿，一部分人颓了，不折腾了，开始“享受”生活。另一部分人想到了奋斗，他们觉得这是一种向上的生活状态，于是咬咬牙继续拼。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/11/04/what-do-i-think-when-i-talk-about-fighting/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/30/2014-Marathon/">吸着雾霾去跑马</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/10/30/2014-Marathon/" itemprop="url">
+                  吸着雾霾去跑马
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-10-30T10:14:06+08:00" content="Oct 30 2014">
+              Oct 30 2014
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/10/30/2014-Marathon/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/10/30/2014-Marathon/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>欠了好久的文章，今天总算是得空给写了。话说今年是第二年参加北京马拉松，记得去年马拉松的时候，和宿舍两个人一起去参加，3万人一起在马路上狂奔的感觉真心赞。</p>
+      
+
+      
+        
+          <p>欠了好久的文章，今天总算是得空给写了。话说今年是第二年参加北京马拉松，记得去年马拉松的时候，和宿舍两个人一起去参加，3万人一起在马路上狂奔的感觉真心赞。</p>
 <p>本来今年也是抱着狂欢的心态去的，结果遭遇了各种不爽。真是不得不上来吐槽下了。</p>
 <h3 id="雾霾啊，雾霾！">雾霾啊，雾霾！</h3><p>马拉松前些天大家就得到了不幸的消息：马拉松当天会有严重雾霾。当时很多人就表示，如果当天污染指数达到了300就弃赛。当天五点半起床的时候往窗外看，已经是雾蒙蒙一片了。果不其然，当天的污染指数轻轻松松的破了300。可就算是这样，参加比赛的人依然非常非常多。存衣服、做热身依旧是挤挤挤！<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/10/30/2014-Marathon/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-byrbt-thanks-cheater" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/10/15/byrbt-thanks-cheater/" class="article-date">
-  	<time datetime="2014-10-15T01:36:37.000Z" itemprop="datePublished">Oct 15 2014</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/10/30/2014-Marathon/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/15/byrbt-thanks-cheater/">北邮人BT“说谢谢”刷分</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/10/15/byrbt-thanks-cheater/" itemprop="url">
+                  北邮人BT“说谢谢”刷分
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-10-15T09:36:37+08:00" content="Oct 15 2014">
+              Oct 15 2014
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/10/15/byrbt-thanks-cheater/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/10/15/byrbt-thanks-cheater/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="前言">前言</h1><p>今天上午刚刚搬家到新的博客，这个博客使用Markdown语法写作，靠DropBox同步文章，感觉还是有点儿意思呢。之前的Octopress博客<a href="http://coding.yunbo.li">http://coding.yunbo.li</a>访问速度实在是太差，而且到现在为止我还是没学会怎么在上面发布文章，这时Farbox出现了，索性转了过来。btw，以前的负能量小站已经迁移到了<a href="http://laodao.yunbo.li">http://laodao.yunbo.li</a></p>
+      
+
+      
+        
+          <h1 id="前言">前言</h1><p>今天上午刚刚搬家到新的博客，这个博客使用Markdown语法写作，靠DropBox同步文章，感觉还是有点儿意思呢。之前的Octopress博客<a href="http://coding.yunbo.li">http://coding.yunbo.li</a>访问速度实在是太差，而且到现在为止我还是没学会怎么在上面发布文章，这时Farbox出现了，索性转了过来。btw，以前的负能量小站已经迁移到了<a href="http://laodao.yunbo.li">http://laodao.yunbo.li</a></p>
 <p>目前这个系统的大体流程已经搞明白了，但是和其他博客系统一样，主题修改还是让我头疼。</p>
 <p>不过也管不了那么多啦，等把一切都搞明白了再开始写不知道要等到什么时候了，索性就这样写吧，反正文章丢不了。</p>
 <p>今天给大家带来的是一个Python写的小玩具，在北邮人BT上说谢谢刷魔力值。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BYRBT/">BYRBT</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/10/15/byrbt-thanks-cheater/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-lamp-and-vsftpd-setup" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/10/10/lamp-and-vsftpd-setup/" class="article-date">
-  	<time datetime="2014-10-10T01:31:08.000Z" itemprop="datePublished">Oct 10 2014</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/10/15/byrbt-thanks-cheater/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/10/lamp-and-vsftpd-setup/">Ubuntu下的LAMP和vsftpd配置</a>
-    </h1>
   
 
-      </header>
-      
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    <div class="article-entry" itemprop="articleBody">
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2014/10/10/lamp-and-vsftpd-setup/" itemprop="url">
+                  Ubuntu下的LAMP和vsftpd配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-10-10T09:31:08+08:00" content="Oct 10 2014">
+              Oct 10 2014
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/10/10/lamp-and-vsftpd-setup/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2014/10/10/lamp-and-vsftpd-setup/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="写在前头">写在前头</h2><p>很难想象我竟然起了一个这么 ordinary 的 tilte，事实上标题里说的这个问题已经虐了我一个晚上，尤其是vsftpd，当初在树莓派上配置过vsftpd，隐约记得没有多长时间就配好了。结果隔了半年再次尝试vsftpd的时候，这货狠狠地抽了我一巴掌，死活配不对，尤其是用户那一块儿，简直烦死了。好不容易折腾好了，马克一下，防止下次被虐。</p>
+      
+
+      
+        
+          <h2 id="写在前头">写在前头</h2><p>很难想象我竟然起了一个这么 ordinary 的 tilte，事实上标题里说的这个问题已经虐了我一个晚上，尤其是vsftpd，当初在树莓派上配置过vsftpd，隐约记得没有多长时间就配好了。结果隔了半年再次尝试vsftpd的时候，这货狠狠地抽了我一巴掌，死活配不对，尤其是用户那一块儿，简直烦死了。好不容易折腾好了，马克一下，防止下次被虐。</p>
 <h2 id="环境说明">环境说明</h2><p>写这篇文章的时候没在学校，手上只有一台弱不经风的air，小心翼翼地在虚拟机里装了Ubuntu Server 12.04。网卡用了桥接模式，所以虚拟机里的系统得到的是类似192.168.1.xxx这样的IP。其他的就没什么好说的了。</p>
 <h2 id="先换个源">先换个源</h2><p>北京地区的推荐北京交通大学或者搜狐的源，速度超快哦~如果你在教育网的话那就随意了，清华、北理工、华中科大等等速度都好得不得了。</p>
 <p>以北交源为例，从<a href="http://mirror.bjtu.edu.cn/cn/howto.html">这个页面</a>查看源地址，然后修改sources.list。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/10/10/lamp-and-vsftpd-setup/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
+
+    <footer class="post-footer">
       
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LAMP/">LAMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vsftpd/">vsftpd</a></li></ul>
-	</div>
 
       
 
       
-        <p class="article-more-link">
-          <a  href="/2014/10/10/lamp-and-vsftpd-setup/#more">more >></a>
-        </p>
       
-      <div class="clearfix"></div>
-    </div>
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
+
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="XiaoHan" />
+          <p class="site-author-name" itemprop="name">XiaoHan</p>
+          <p class="site-description motion-element" itemprop="description">嗯，小寒废话最多了。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XiaoHan</span>
 </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2015 XiaoHan
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
   </div>
-</footer>
-    </div>
-    
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: undefined,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: undefined
-	}
-</script>
-<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+  
 
 
 
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
 
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+  
 
 
-  </div>
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'hansnow';
+      var disqus_identifier = 'index.html';
+      var disqus_title = '';
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      };
+
+      run_disqus_script('count.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+  
+
+
 </body>
 </html>
